@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt món - Nhà hàng Tự Do</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../Image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Image/logo.png">
+    <link rel="shortcut icon" href="../Image/logo.png">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/order.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <img src="../Image/logo.png" alt="Logo nhà hàng" />
+        <h1 id="name-retaurant" class="title-bold">Nhà hàng Tự Do</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="oder.html">Đặt món</a></li>
+                <li><a href="dashBoardMenu.html">Quản Lý Menu</a></li>
+                <li><a href="register.html">Đổi tên nhà hàng</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main">
+        <div class="order-container">
+            <h2 class="section-title">Đặt món</h2>
+
+            <!-- Bảng menu -->
+            <div class="menu-section">
+                <h3>Menu nhà hàng</h3>
+                <div class="table-container">
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>Tên món</th>
+                                <th>Danh mục</th>
+                                <th>Giá (VNĐ)</th>
+                                <th>Mô tả</th>
+                                <th>Số lượng</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="menu-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Giỏ hàng -->
+            <div class="cart-section">
+                <h3>Giỏ hàng</h3>
+                <div class="cart-container">
+                    <div class="cart-items" id="cart-items">
+                        <p class="empty-cart">Giỏ hàng trống</p>
+                    </div>
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Tạm tính:</span>
+                            <span id="subtotal">0 VND</span>
+                        </div>
+                        <div class="summary-row">
+                            <span> Thuế VAT(<span id="tax-label">10%</span>)</span>
+                            <span id="tax">0 VND</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Tổng cộng:</span>
+                            <span id="total">0 VND</span>
+                        </div>
+                        <button class="checkout-btn" id="checkout-btn" disabled>Đặt món</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../JS/main.js"></script>
+    <script type="module" src="../JS/orderView.js"></script>
+</body>
+
+</html>

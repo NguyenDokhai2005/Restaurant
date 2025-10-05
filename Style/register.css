@@ -1,0 +1,115 @@
+/* Theme variables - matching index page */
+:root {
+    --color-primary: #87CEEB;
+    /* Sky blue */
+    --color-accent: #e4cf59;
+    /* Gold */
+    --color-text: #1f2d3d;
+    --color-muted: #2c343f;
+    --color-surface: #ffffff;
+    --color-border: rgba(0, 0, 0, 0.08);
+    --primary-soft: rgba(135, 206, 235, 0.08);
+    --accent-soft: rgba(255, 215, 0, 0.08);
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--color-text);
+    background-image: url(../Image/nen-introduce.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.register-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background: linear-gradient(180deg, var(--primary-soft), rgba(212, 212, 209, 0.849));
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.register-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.rename-form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.rename-form label {
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.rename-form input {
+    background: linear-gradient(180deg, var(--primary-soft), var(--color-surface));
+    width: 95%;
+    padding: 12px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--color-text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rename-form input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
+}
+
+.rename-form input::placeholder {
+    color: var(--color-muted);
+    opacity: 0.7;
+}
+
+.rename-form button {
+    margin-top: 8px;
+    padding: 12px 20px;
+    border: none;
+    background: var(--color-accent);
+    color: var(--color-text);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+    font-family: inherit;
+}
+
+.rename-form button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
+    filter: brightness(1.02);
+}
+
+.rename-form button:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .register-container {
+        margin: 40px 20px;
+        padding: 24px;
+    }
+
+    .register-container h2 {
+        font-size: 24px;
+    }
+}

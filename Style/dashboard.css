@@ -1,0 +1,339 @@
+/* Dashboard Menu - Simple Design */
+.dashboard-menu {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Josefin Sans', sans-serif;
+    background: white;
+}
+
+/* Table Header */
+.menu-table thead {
+    background: #87CEEB;
+}
+
+.menu-table thead th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+    border: none;
+}
+
+.menu-table thead th:first-child {
+    border-top-left-radius: 8px;
+    text-align: center;
+    width: 80px;
+}
+
+.menu-table thead th:last-child {
+    border-top-right-radius: 8px;
+    text-align: center;
+    width: 120px;
+}
+
+/* Table Body */
+.menu-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.menu-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.menu-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.menu-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+.menu-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+/* Table Cells */
+.menu-table td {
+    padding: 15px;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* ID Column */
+.menu-table td:first-child {
+    font-weight: 600;
+    color: #87CEEB;
+    text-align: center;
+    background-color: #f0f8ff;
+    width: 80px;
+}
+
+/* Name Column */
+.menu-table td:nth-child(2) {
+    font-weight: 600;
+    color: #333;
+    min-width: 200px;
+}
+
+/* Category Column */
+.menu-table td:nth-child(3) {
+    text-align: center;
+}
+
+/* Description Column */
+.menu-table td:nth-child(4) {
+    color: #666;
+    max-width: 300px;
+}
+
+/* Price Column */
+.menu-table td:nth-child(5) {
+    font-weight: 600;
+    color: #e4cf59;
+    text-align: right;
+    min-width: 100px;
+}
+
+/* Actions Column */
+.menu-table td:nth-child(6) {
+    text-align: center;
+    width: 120px;
+}
+
+/* Category Badges */
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.category-badge.appetizer {
+    background-color: #ff6b6b;
+}
+
+.category-badge.main {
+    background-color: #4ecdc4;
+}
+
+.category-badge.dessert {
+    background-color: #feca57;
+}
+
+.category-badge.beverage {
+    background-color: #48dbfb;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 35px;
+    height: 35px;
+}
+
+.btn-edit {
+    background-color: #4facfe;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #2196f3;
+}
+
+.btn-delete {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #f44336;
+}
+
+.btn i {
+    font-size: 14px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.empty-state i {
+    font-size: 60px;
+    color: #87CEEB;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #87CEEB;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Messages */
+.message {
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-weight: 500;
+    display: none;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.show {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-menu {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .menu-table thead th {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+    
+    .menu-table td {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+    
+    .menu-table td:nth-child(4) {
+        max-width: 200px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .menu-table thead,
+    .menu-table tbody,
+    .menu-table th,
+    .menu-table td,
+    .menu-table tr {
+        display: block;
+    }
+    
+    .menu-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .menu-table tr {
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 10px;
+        background: white;
+    }
+    
+    .menu-table td {
+        border: none;
+        position: relative;
+        padding: 8px 0 8px 50%;
+        text-align: left;
+    }
+    
+    .menu-table td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #87CEEB;
+    }
+    
+    .action-buttons {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

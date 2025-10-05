@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tự Do</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../Image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Image/logo.png">
+    <link rel="shortcut icon" href="../Image/logo.png">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <img src="../Image/logo.png" alt="Logo nhà hàng" />
+        <h1 id="name-retaurant" class="title-bold">Loading...</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="oder.html">Đặt món</a></li>
+                <li><a href="dashBoardMenu.html">Quản Lý Menu</a></li>
+                <li><a href="register.html">Đổi tên nhà hàng</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="introduce">
+        <h2 class="title-introduce">Giới thiệu nhà hàng</h2>
+        <p class="intro-text">
+            Tự Do Restaurant mang đến cho bạn trải nghiệm ẩm thực Việt với nguyên liệu tươi,
+            hương vị truyền thống và không gian ấm cúng. Chúng tôi luôn nỗ lực phục vụ tận tâm,
+            đảm bảo mỗi món ăn đều trọn vẹn chất lượng và sự tinh tế.
+        </p>
+    </div>
+
+    <div id="customers-section">
+        <h2 class="title-customers">Khách hàng đã tới với nhà hàng</h2>
+        <div id="customers-list"></div>
+    </div>
+
+    <div id="menu-section">
+        <h2 class="title-menu">Menu</h2>
+        <div id="menu-list"></div>
+    </div>
+
+    <section id="contact">
+        <h2 class="title-contact">Liên hệ</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Địa chỉ:</strong>
+                <p id="adress"></p>
+                </p>
+                <p><strong>Điện thoại:</strong>
+                <p id="phone"></p>
+                </p>
+                <p><strong>Email:</strong>
+                <p id="email"></p>
+                </p>
+            </div>
+            <form class="contact-form"
+                onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã liên hệ!'); this.reset();">
+                <div class="form-row">
+                    <input type="text" placeholder="Họ và tên" required>
+                    <input type="tel" placeholder="Số điện thoại" required>
+                </div>
+                <input type="email" placeholder="Email">
+                <textarea rows="4" placeholder="Lời nhắn" required></textarea>
+                <button type="submit">Gửi liên hệ</button>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="../JS/customersView.js"></script>
+    <script type="module" src="../JS/menuView.js"></script>
+    <script type="module" src="../JS/main.js"></script>
+</body>
+
+</html>

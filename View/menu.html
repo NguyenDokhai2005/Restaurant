@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Nhà hàng Tự Do</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../Image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Image/logo.png">
+    <link rel="shortcut icon" href="../Image/logo.png">
+    <link rel="stylesheet" href="../Style/menu.css">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <img src="../Image/logo.png" alt="Logo nhà hàng" />
+        <h1 id="name-retaurant" class="title-bold">Nhà hàng Tự Do</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="oder.html">Đặt món</a></li>
+                <li><a href="dashBoardMenu.html">Quản Lý Menu</a></li>
+                <li><a href="register.html">Đổi tên nhà hàng</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <section class="page-header">
+                <h2 class="page-title">Thực đơn của chúng tôi</h2>
+                <p class="page-subtitle">Khám phá những món ăn ngon nhất từ nhà hàng Tự Do</p>
+            </section>
+
+            <section class="filter-section">
+                <h3 class="filter-title">Lọc theo danh mục</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Tất cả</button>
+                    <button class="filter-btn" data-category="Khai vị">Khai vị</button>
+                    <button class="filter-btn" data-category="Món chính">Món chính</button>
+                    <button class="filter-btn" data-category="Đồ uống">Đồ uống</button>
+                    <button class="filter-btn" data-category="Tráng miệng">Tráng miệng</button>
+                    <button class="filter-btn" data-category="Salad">Salad</button>
+                    <button class="filter-btn" data-category="Soup">Soup</button>
+                    <button class="filter-btn" data-category="Hải sản">Hải sản</button>
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <div id="menu-list" class="menu-grid">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="contact">
+        <h2 class="title-contact">Liên hệ</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Địa chỉ:</strong>
+                <p id="adress"></p>
+                </p>
+                <p><strong>Điện thoại:</strong>
+                <p id="phone"></p>
+                </p>
+                <p><strong>Email:</strong>
+                <p id="email"></p>
+                </p>
+            </div>
+            <form class="contact-form"
+                onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã liên hệ!'); this.reset();">
+                <div class="form-row">
+                    <input type="text" placeholder="Họ và tên" required>
+                    <input type="tel" placeholder="Số điện thoại" required>
+                </div>
+                <input type="email" placeholder="Email">
+                <textarea rows="4" placeholder="Lời nhắn" required></textarea>
+                <button type="submit">Gửi liên hệ</button>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="../JS/menuView.js"></script>
+    <script type="module" src="../JS/main.js"></script>
+</body>
+
+</html>

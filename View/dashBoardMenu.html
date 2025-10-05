@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Menu</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../Image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Image/logo.png">
+    <link rel="shortcut icon" href="../Image/logo.png">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <img src="../Image/logo.png" alt="Logo nhà hàng" />
+        <h1 id="name-retaurant" class="title-bold">Loading...</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="oder.html">Đặt món</a></li>
+                <li><a href="register.html">Đổi tên nhà hàng</a></li>
+                <li><a href="addItemMenu.html" class="active">Thêm món</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="dashboard-menu">
+        <table class="menu-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên món</th>
+                    <th>Danh Mục</th>
+                    <th>Mô tả</th>
+                    <th>Giá</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="menu-table-body">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="../JS/dashboard.js"></script>
+    <script type="module" src="../JS/main.js"></script>
+</body>
+
+</html>

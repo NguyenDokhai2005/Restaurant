@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm món mới - Nhà hàng Tự Do</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../Image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Image/logo.png">
+    <link rel="shortcut icon" href="../Image/logo.png">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/addItemMenu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <img src="../Image/logo.png" alt="Logo nhà hàng" />
+        <h1 id="name-retaurant" class="title-bold">Nhà hàng Tự Do</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="oder.html">Đặt món</a></li>
+                <li><a href="register.html">Đổi tên nhà hàng</a></li>
+                <li><a href="addItemMenu.html" class="active">Thêm món</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <section class="page-header">
+                <h2 class="page-title">Thêm món mới vào menu</h2>
+                <p class="page-subtitle">Điền thông tin chi tiết để thêm món ăn mới vào thực đơn</p>
+            </section>
+
+            <section class="form-section">
+                <div class="form-container">
+                    <form class="add-menu-form" id="addMenuForm">
+                        <div class="form-group">
+                            <label for="itemName" class="form-label">Tên món ăn *</label>
+                            <input type="text" id="itemName" name="itemName" class="form-input"
+                                placeholder="Nhập tên món ăn" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="itemPrice" class="form-label">Giá (VNĐ) *</label>
+                            <input type="number" id="itemPrice" name="itemPrice" class="form-input"
+                                placeholder="Nhập giá món ăn" min="0" step="1000" required>
+                            <span class="form-error" id="priceError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="itemCategory" class="form-label">Danh mục *</label>
+                            <select id="itemCategory" name="itemCategory" class="form-select" required>
+                                <option value="">Chọn danh mục</option>
+                                <option value="Khai vị">Khai vị</option>
+                                <option value="Món chính">Món chính</option>
+                                <option value="Tráng miệng">Tráng miệng</option>
+                                <option value="Đồ uống">Đồ uống</option>
+                                <option value="Salad">Salad</option>
+                                <option value="Soup">Soup</option>
+                                <option value="Hải sản">Hải sản</option>
+                            </select>
+                            <span class="form-error" id="categoryError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="itemDescription" class="form-label">Mô tả món ăn</label>
+                            <textarea id="itemDescription" name="itemDescription" class="form-textarea" rows="4"
+                                placeholder="Mô tả chi tiết về món ăn (tùy chọn)"></textarea>
+                            <span class="form-error" id="descriptionError"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="addItemButton">
+                                <span class="btn-icon">+</span>
+                                Thêm món
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="../JS/addItemMenu.js"></script>
+</body>
+
+</html>
